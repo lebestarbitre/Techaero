@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sécurité informatique - TechAero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="entete">
+        <h1>🛡️ Sécurité informatique</h1>
+        <p>Protégez vos appareils et vos données personnelles</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="plan.html">Plan du site</a>
+        <a href="materiel.html">Matériel</a>
+        <a href="systemes.html">Systèmes</a>
+        <a href="reseaux.html">Réseaux</a>
+        <a href="securite.html">Sécurité</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="apropos.html">À propos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="panneau">
+
+            <h2>Qu'est-ce que la sécurité informatique ?</h2>
+
+            <p>
+                La sécurité informatique regroupe les méthodes
+                et les technologies permettant de protéger
+                les ordinateurs, les réseaux et les données
+                contre les accès non autorisés, les logiciels
+                malveillants et les cyberattaques.
+            </p>
+
+            <p>
+                Elle vise notamment à garantir la confidentialité,
+                l'intégrité et la disponibilité des informations.
+            </p>
+
+        </section>
+
+        <section class="securite-grille">
+
+            <article class="carte-securite">
+                <div class="icone-securite">🦠</div>
+
+                <h2>Virus et logiciels malveillants</h2>
+
+                <p>
+                    Les logiciels malveillants peuvent voler
+                    des informations, endommager des fichiers
+                    ou perturber le fonctionnement d'un ordinateur.
+                </p>
+
+                <p>
+                    Il est important de maintenir son système
+                    à jour et d'utiliser une protection adaptée.
+                </p>
+            </article>
+
+            <article class="carte-securite">
+                <div class="icone-securite">🎣</div>
+
+                <h2>Hameçonnage (phishing)</h2>
+
+                <p>
+                    L'hameçonnage consiste à tromper une personne
+                    à l'aide de faux messages ou de sites frauduleux
+                    pour obtenir des renseignements confidentiels.
+                </p>
+
+                <p>
+                    Il faut vérifier l'expéditeur et l'adresse
+                    des sites avant de transmettre des informations.
+                </p>
+            </article>
+
+            <article class="carte-securite">
+                <div class="icone-securite">🔑</div>
+
+                <h2>Mots de passe</h2>
+
+                <p>
+                    Un mot de passe long, unique et difficile
+                    à deviner aide à protéger un compte.
+                </p>
+
+                <p>
+                    Un gestionnaire de mots de passe et
+                    l'authentification multifacteur offrent
+                    une protection supplémentaire.
+                </p>
+            </article>
+
+            <article class="carte-securite">
+                <div class="icone-securite">🔥</div>
+
+                <h2>Pare-feu</h2>
+
+                <p>
+                    Un pare-feu surveille et filtre les
+                    communications réseau selon des règles
+                    de sécurité définies.
+                </p>
+
+                <p>
+                    Il contribue à limiter les connexions
+                    non autorisées, mais ne remplace pas
+                    les autres mesures de protection.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="panneau">
+
+            <h2>Les bonnes pratiques de cybersécurité</h2>
+
+            <ul class="liste-securite">
+                <li>Installer régulièrement les mises à jour.</li>
+                <li>Utiliser des mots de passe uniques.</li>
+                <li>Activer l'authentification multifacteur.</li>
+                <li>Effectuer des sauvegardes de ses fichiers.</li>
+                <li>Éviter les téléchargements suspects.</li>
+                <li>Vérifier les liens avant de cliquer.</li>
+                <li>Verrouiller son ordinateur lorsqu'on s'absente.</li>
+            </ul>
+
+        </section>
+
+        <section class="panneau">
+
+            <h2>Testez vos connaissances !</h2>
+
+            <p>
+                Vous recevez un courriel qui prétend provenir
+                de votre banque et vous demande de confirmer
+                immédiatement votre mot de passe.
+            </p>
+
+            <p><strong>Que devriez-vous faire ?</strong></p>
+
+            
+<div class="quiz-securite">
+
+    <button onclick="verifierReponse(1)">
+        Cliquer sur le lien du courriel
+    </button>
+
+    <button onclick="verifierReponse(2)">
+        Vérifier directement auprès de la banque
+    </button>
+
+    <button onclick="verifierReponse(3)">
+        Répondre avec son mot de passe
+    </button>
+
+</div>
+
+
+            <p id="resultat-quiz" aria-live="polite"></p>
+
+        </section>
+
+        <section class="panneau">
+            <h2>Pour en savoir plus</h2>
+
+            <p>
+                Consultez les recommandations du
+                Centre canadien pour la cybersécurité.
+            </p>
+
+            <a class="bouton-aero"
+               href="https://www.cyber.gc.ca/fr"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visiter le Centre canadien pour la cybersécurité ↗
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 FIRRAS GUELMAMI - Techaero</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

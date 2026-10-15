@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - TechAero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="entete">
+        <h1>✉️ Contactez-nous</h1>
+        <p>Une question ? Nous sommes à votre écoute !</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="plan.html">Plan du site</a>
+        <a href="materiel.html">Matériel</a>
+        <a href="systemes.html">Systèmes</a>
+        <a href="reseaux.html">Réseaux</a>
+        <a href="securite.html">Sécurité</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="apropos.html">À propos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="panneau contact-intro">
+            <h2>Restons en contact !</h2>
+
+            <p>
+                Vous avez une question concernant
+                l'informatique, une suggestion ou un
+                commentaire sur TechAero ?
+            </p>
+
+            <p>
+                Remplissez le formulaire ci-dessous
+                pour nous transmettre votre message.
+            </p>
+        </section>
+
+        <section class="contact-grille">
+
+            <!-- FORMULAIRE -->
+
+            <div class="contact-carte">
+
+                <h2>📝 Envoyez un message</h2>
+
+                <form id="formulaire-contact">
+
+                    <label for="nom">Votre nom</label>
+                    <input type="text"
+                           id="nom"
+                           name="nom"
+                           placeholder="Entrez votre nom"
+                           required>
+
+                    <label for="email">Votre courriel</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="exemple@courriel.com"
+                           required>
+
+                    <label for="message">Votre message</label>
+                    <textarea id="message"
+                              name="message"
+                              rows="6"
+                              placeholder="Écrivez votre message ici..."
+                              required></textarea>
+
+                    <button type="submit"
+                            class="bouton-aero">
+                        Envoyer le message ✉️
+                    </button>
+
+                    <p id="confirmation-contact"
+                       aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+            <!-- COORDONNÉES -->
+
+            <div class="contact-carte">
+
+                <h2>🌐 Nos coordonnées</h2>
+
+                <p>
+                    Vous pouvez également nous joindre
+                    directement par courriel.
+                </p>
+
+                <p>
+                    📧
+                    <a href="mailto:guelmamif1@csdmedu.ca">
+                        guelmamif1@csdmedu.ca
+                    </a>
+                </p>
+
+                <h2>Suivez-nous !</h2>
+
+                <p>
+                    Retrouvez les communautés informatiques
+                    sur les réseaux sociaux.
+                </p>
+
+                <div class="reseaux-sociaux">
+
+                    <a href="https://www.youtube.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social youtube">
+                        <span aria-hidden="true">▶️</span>
+                        YouTube
+                    </a>
+
+                    <a href="https://www.facebook.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social facebook">
+                        <span aria-hidden="true">📘</span>
+                        Facebook
+
+                        
+                       <a href="https://www.instagram.com/techaero_1/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social instagram">
+                        <span aria-hidden="true">📸</span>
+                         Instagram
+                         </a>
+
+                    </a>
+
+                </div>
+
+                <p class="contact-note">
+                    TechAero est un projet éducatif
+                    consacré à l'informatique.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="panneau contact-retour">
+
+            <h2>Merci de visiter TechAero !</h2>
+
+            <p>
+                Continuez à explorer les différentes
+                rubriques de notre site.
+            </p>
+
+            <a href="index.html" class="bouton-aero">
+                ← Retour à l'accueil
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 FIRRAS GUELMAMI - Techaero</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie multimédia - TechAero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="entete">
+        <h1>🎬 Galerie multimédia</h1>
+        <p>Découvrez l'informatique en images et en vidéos</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="plan.html">Plan du site</a>
+        <a href="materiel.html">Matériel</a>
+        <a href="systemes.html">Systèmes</a>
+        <a href="reseaux.html">Réseaux</a>
+        <a href="securite.html">Sécurité</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="apropos.html">À propos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="panneau accueil">
+            <h2>Bienvenue dans notre galerie !</h2>
+
+            <p>
+                Explorez le monde de l'informatique grâce
+                à notre collection d'images, de vidéos
+                et de contenus multimédias.
+            </p>
+        </section>
+
+        <section class="panneau galerie-section">
+
+            <h2>📸 Diaporama informatique</h2>
+
+            <p>
+                Utilisez les flèches pour découvrir
+                les différentes images.
+            </p>
+
+            <div class="diaporama">
+
+                <button class="fleche-galerie"
+                        onclick="changerImage(-1)"
+                        aria-label="Image précédente">
+                    ❮
+                </button>
+
+                <img id="image-galerie"
+     src="images/ordinateur.jpg"
+     alt="Ordinateur et composants informatiques"
+     onclick="ouvrirVisionneuse()"
+     tabindex="0"
+     role="button"
+     aria-label="Agrandir l'image"
+     onkeydown="if(event.key === 'Enter') ouvrirVisionneuse()">
+
+                <button class="fleche-galerie"
+                        onclick="changerImage(1)"
+                        aria-label="Image suivante">
+                    ❯
+                </button>
+
+            </div>
+
+            <p id="legende-galerie">
+                1 / 5 — Matériel informatique
+            </p>
+
+        </section>
+
+        <section class="panneau galerie-section">
+
+            <h2>🎥 Vidéos éducatives</h2>
+
+            <p>
+                Découvrez deux vidéos consacrées
+                aux technologies informatiques.
+            </p>
+
+            <div class="videos-grille">
+
+                <div class="video-carte">
+                    <h3>Les composants d'un ordinateur</h3>
+
+                    <iframe
+                        src="https://www.youtube.com/embed/ExxFxD4OSZ0"
+                        title="Vidéo sur les composants informatiques"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="video-carte">
+                    <h3>Comment fonctionne Internet ?</h3>
+
+                    <iframe
+                        src="https://www.youtube.com/embed/x3c1ih2NJEg"
+                        title="Vidéo sur le fonctionnement d'Internet"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+       
+<!-- MUSIQUE ET EFFETS SONORES -->
+
+<section class="panneau galerie-section">
+
+    <h2>🎵 Espace audio TechAero</h2>
+
+    <p>
+        
+    </p>
+
+    <div class="audio-grille">
+
+        <!-- LECTEUR MUSIQUE -->
+
+        <div class="lecteur-aero">
+
+            <div class="lecteur-icone">🎵</div>
+
+            <h3>Musique d'ambiance</h3>
+            <p>TechAero - Ambiance numérique</p>
+
+            <audio id="musique">
+                <source src="audio/ambiance.mp3"
+                        type="audio/mpeg">
+            </audio>
+
+            <div class="commandes-aero">
+
+                <button onclick="basculerAudio('musique')"
+                        id="bouton-musique"
+                        aria-label="Lire ou mettre en pause la musique">
+                    ▶
+                </button>
+
+                <button onclick="arreterAudio('musique')"
+                        aria-label="Arrêter la musique">
+                    ■
+                </button>
+
+            </div>
+
+            <input type="range"
+                   id="progression-musique"
+                   class="barre-aero"
+                   min="0" max="100" value="0"
+                   aria-label="Position de la musique"
+                   oninput="deplacerAudio('musique', this.value)">
+
+            <p id="temps-musique">0:00 / 0:00</p>
+
+            <label for="volume-musique">🔊 Volume</label>
+
+            <input type="range"
+                   id="volume-musique"
+                   min="0" max="1"
+                   step="0.05" value="0.7"
+                   oninput="changerVolume('musique', this.value)">
+
+        </div>
+
+        <!-- LECTEUR EFFET SONORE -->
+
+        <div class="lecteur-aero">
+
+            <div class="lecteur-icone">🔔</div>
+
+            <h3>Effet sonore</h3>
+            
+
+            <audio id="son">
+                <source src="audio/notification.mp3"
+                        type="audio/mpeg">
+            </audio>
+
+            <div class="commandes-aero">
+
+                <button onclick="basculerAudio('son')"
+                        id="bouton-son"
+                        aria-label="Lire ou mettre en pause le son">
+                    ▶
+                </button>
+
+                <button onclick="arreterAudio('son')"
+                        aria-label="Arrêter le son">
+                    ■
+                </button>
+
+            </div>
+
+            <input type="range"
+                   id="progression-son"
+                   class="barre-aero"
+                   min="0" max="100" value="0"
+                   aria-label="Position du son"
+                   oninput="deplacerAudio('son', this.value)">
+
+            <p id="temps-son">0:00 / 0:00</p>
+
+            <label for="volume-son">🔊 Volume</label>
+
+            <input type="range"
+                   id="volume-son"
+                   min="0" max="1"
+                   step="0.05" value="0.7"
+                   oninput="changerVolume('son', this.value)">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 FIRRAS GUELMAMI - Techaero</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+<!-- VISIONNEUSE PLEIN ÉCRAN -->
+
+<div id="visionneuse" class="visionneuse"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Visionneuse de photos"
+     hidden>
+
+    <button class="fermer-visionneuse"
+            onclick="fermerVisionneuse()"
+            aria-label="Fermer la visionneuse">
+        &times;
+    </button>
+
+    <button class="visionneuse-fleche gauche"
+            onclick="naviguerVisionneuse(-1)"
+            aria-label="Photo précédente">
+        &#10094;
+    </button>
+
+    <img id="image-agrandie"
+         src=""
+         alt="Image agrandie">
+
+    <button class="visionneuse-fleche droite"
+            onclick="naviguerVisionneuse(1)"
+            aria-label="Photo suivante">
+        &#10095;
+    </button>
+
+    <p id="legende-agrandie"></p>
+
+</div>
+
+</body>
+</html>
